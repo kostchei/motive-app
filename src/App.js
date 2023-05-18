@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -29,16 +29,10 @@ function App() {
       moralResult = randomValue < 16 ? 'Good' : randomValue < 84 ? 'Neutral' : 'Evil';
     } else if (baseMoral === 'Evil') {
       moralResult = randomValue < 5 ? 'Good' : randomValue < 32 ? 'Neutral' : 'Evil';
-    }// Similarly implement for Neutral and Evil
+    }
   
-    return ethosResult + ' ' + moralResult;
+    setEndAlignment(ethosResult + ' ' + moralResult);
   };
-  // Update endAlignment whenever baseEthos or baseMoral changes
-// Update endAlignment whenever baseEthos or baseMoral changes
-useEffect(() => {
-  setEndAlignment(calculateEndAlignment());
-// eslint-disable-next-line react-hooks/exhaustive-deps
-}, [baseEthos, baseMoral]);
 
   return (
     <div className="App">
@@ -55,6 +49,8 @@ useEffect(() => {
         <option value="Neutral">Neutral</option>
         <option value="Evil">Evil</option>
       </select>
+
+      <button onClick={calculateEndAlignment}>Calculate Alignment</button>
 
       <h3>End Alignment:</h3>
       <p>{endAlignment}</p>
