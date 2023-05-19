@@ -67,7 +67,6 @@ function App() {
         selected.push({
           ...pairsCopy[index], 
           virtueValue: Math.floor(Math.random() * 6) + 15,
-          viceValue: undefined
         });
         pairsCopy.splice(index, 1);
       }
@@ -75,7 +74,6 @@ function App() {
       let index = Math.floor(Math.random() * pairsCopy.length);
       selected.push({
         ...pairsCopy[index], 
-        virtueValue: undefined,
         viceValue: Math.floor(Math.random() * 6) + 15
       });
       break;
@@ -86,12 +84,10 @@ function App() {
           selected.push({
             ...pairsCopy[index], 
             virtueValue: Math.floor(Math.random() * 6) + 15,
-            viceValue: undefined
           });
         } else {
           selected.push({
             ...pairsCopy[index], 
-            virtueValue: undefined,
             viceValue: Math.floor(Math.random() * 6) + 15
           });
         }
@@ -103,7 +99,6 @@ function App() {
         let index = Math.floor(Math.random() * pairsCopy.length);
         selected.push({
           ...pairsCopy[index], 
-          virtueValue: undefined,
           viceValue: Math.floor(Math.random() * 6) + 15
         });
         pairsCopy.splice(index, 1);
@@ -113,7 +108,6 @@ function App() {
       selected.push({
         ...pairsCopy[index], 
         virtueValue: Math.floor(Math.random() * 6) + 15,
-        viceValue: undefined
       });
       break;
     default:
@@ -122,10 +116,6 @@ function App() {
 
   setSelectedPairs(selected);
 }; 
-
-
-
-
 
   return (
     <div className="App">
