@@ -140,10 +140,16 @@ function App() {
 
       <h3>Character Traits:</h3>
       <ul>
-        {selectedPairs.map(pair => 
-          <li key={pair.virtue}>
-            {pair.virtue}: {pair.virtueValue || "N/A"}, {pair.vice}: {pair.viceValue || "N/A"}
-          </li>)}
+      {selectedPairs.map((pair, index) => (
+  <div key={index}>
+    {pair.virtueValue !== undefined && 
+      <p>{pair.virtue}: {pair.virtueValue}</p>
+    }
+    {pair.viceValue !== undefined && 
+      <p>{pair.vice}: {pair.viceValue}</p>
+    }
+  </div>
+))}
       </ul>
       
       <h3>Piety:</h3>
