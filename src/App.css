@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 16px;
+  color: #3d1e0d; /* Very dark brown */
   font-family: 'Merriweather', serif;
   background: url('/public/background.jpg') no-repeat center center fixed; 
   background-size: 100% auto;
