@@ -118,7 +118,7 @@ function App() {
 }; 
 
   return (
-    <div className="App">
+    <div className="App content">
       <select value={baseEthos} onChange={e => setBaseEthos(e.target.value)}>
         <option value="None">None</option>
         <option value="Lawful">Lawful</option>
