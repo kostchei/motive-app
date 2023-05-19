@@ -49,8 +49,8 @@ function App() {
       moralResult = randomValueMoral < 5 ? 'Good' : randomValueMoral < 32 ? 'Neutral' : 'Evil';
     }
 
-  let pietyValue = Math.abs(2 * Math.floor(Math.random() * 20 + 1) - 20);
-  let factionalReputationValue = Math.abs(2 * Math.floor(Math.random() * 50 + 1) - 50);
+  let pietyValue = Math.abs(3 * Math.floor(Math.random() * 10 + 1) - 10);
+  let factionalReputationValue = Math.abs(3 * Math.floor(Math.random() * 25 + 1) - 25);
 
   setPiety(pietyValue);
   setFactionalReputation(factionalReputationValue);
