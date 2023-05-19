@@ -9,30 +9,28 @@ function App() {
   // Declare calculateEndAlignment function here...
   const calculateEndAlignment = () => {
     let ethosResult, moralResult;
-    const randomValue = Math.random() * 100;
-  
+    let randomValueEthos = Math.random() * 100;
+    let randomValueMoral = Math.random() * 100;
+
     if (baseEthos === 'None') {
-      ethosResult = randomValue < 30 ? 'Lawful' : randomValue < 70 ? 'Neutral' : 'Chaotic';
+      ethosResult = randomValueEthos < 30 ? 'Lawful' : randomValueEthos < 70 ? 'Neutral' : 'Chaotic';
     } else if (baseEthos === 'Lawful') {
-      ethosResult = randomValue < 68 ? 'Lawful' : randomValue < 95 ? 'Neutral' : 'Chaotic';
+      ethosResult = randomValueEthos < 68 ? 'Lawful' : randomValueEthos < 95 ? 'Neutral' : 'Chaotic';
     } else if (baseEthos === 'Neutral') {
-      ethosResult = randomValue < 16 ? 'Lawful' : randomValue < 84 ? 'Neutral' : 'Chaotic';
+      ethosResult = randomValueEthos < 16 ? 'Lawful' : randomValueEthos < 84 ? 'Neutral' : 'Chaotic';
     } else if (baseEthos === 'Chaotic') {
-      ethosResult = randomValue < 5 ? 'Lawful' : randomValue < 32 ? 'Neutral' : 'Chaotic';
+      ethosResult = randomValueEthos < 5 ? 'Lawful' : randomValueEthos < 32 ? 'Neutral' : 'Chaotic';
     }
-  
+
     if (baseMoral === 'None') {
-      moralResult = randomValue < 30 ? 'Good' : randomValue < 70 ? 'Neutral' : 'Evil';
+      moralResult = randomValueMoral < 30 ? 'Good' : randomValueMoral < 70 ? 'Neutral' : 'Evil';
     } else if (baseMoral === 'Good') {
-      moralResult = randomValue < 68 ? 'Good' : randomValue < 95 ? 'Neutral' : 'Evil';
+      moralResult = randomValueMoral < 68 ? 'Good' : randomValueMoral < 95 ? 'Neutral' : 'Evil';
     } else if (baseMoral === 'Neutral') {
-      moralResult = randomValue < 16 ? 'Good' : randomValue < 84 ? 'Neutral' : 'Evil';
+      moralResult = randomValueMoral < 16 ? 'Good' : randomValueMoral < 84 ? 'Neutral' : 'Evil';
     } else if (baseMoral === 'Evil') {
-      moralResult = randomValue < 5 ? 'Good' : randomValue < 32 ? 'Neutral' : 'Evil';
+      moralResult = randomValueMoral < 5 ? 'Good' : randomValueMoral < 32 ? 'Neutral' : 'Evil';
     }
-  
-    setEndAlignment(ethosResult + ' ' + moralResult);
-  };
 
   return (
     <div className="App">
